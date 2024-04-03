@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 15, 15, 35; /* RGB values for #0f0f23 */
+  --background-end-rgb: 15, 15, 35; /* RGB values for #0f0f23 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 15, 15, 35; /* RGB values for #0f0f23 */
+    --background-end-rgb: 15, 15, 35; /* RGB values for #0f0f23 */
+  }
+}
+
+body {
+  background: #0f0f23; /* Updated background color */
+  color: #cccccc; /* Light gray text color */
+  font-family: "Source Code Pro", monospace; /* Monospaced font for a coding-style appearance */
+  font-weight: 300; /* Lighter font weight */
+  font-size: 14pt; /* Larger base font size */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+header h1 a, header h1 span {
+  display: inline-block;
+  text-decoration: none;
+  color: #00cc00; /* Green color */
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00; /* Green text shadow for glow effect */
+}
+
+/* New styles for p tags */
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}

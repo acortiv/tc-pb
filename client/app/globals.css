@@ -34,6 +34,15 @@ header h1 a, header h1 span {
   display: inline-block;
   text-decoration: none;
   color: #00cc00; /* Green color */
+  font-weight: bold;
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00; /* Green text shadow for glow effect */
+}
+
+footer h1 a, footer h1 span {
+  display: inline-block;
+  text-decoration: none;
+  color: #00cc00; /* Green color */
+  font-weight: bold;
   text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00; /* Green text shadow for glow effect */
 }
 

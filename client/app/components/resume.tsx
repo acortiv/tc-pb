@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { getResume } from "../lib/getData";
-import { RecordModel } from "pocketbase";
 
 export default function ResumeDisplay() {
   const [resume, setResume] = useState<string | null>(null);

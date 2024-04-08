@@ -9,13 +9,11 @@ import ContactCallToAction from "./components/contact";
 export default function Home() {
   return (
     <>
-      <Nav/>
       <HeroSection />
       <AboutMe />
       <SkillsAndExperience />
       <RecentProject />  
       <ContactCallToAction />
-      <Footer />
     </>
   );
 }

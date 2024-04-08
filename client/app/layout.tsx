@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
@@ -17,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <Nav />
+        <Nav />
         <main>{children}</main>
         <Footer />
       </body>

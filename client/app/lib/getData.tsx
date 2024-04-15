@@ -1,7 +1,8 @@
 import PocketBase from 'pocketbase';
 
 async function initPocketBase() {
-    const pb = new PocketBase(`${process.env.NEXT_PUBLIC_API_BASE_URL}`);
+    const pb = new PocketBase(`${process.env.NEXT_PUBLIC_API_URL}`);
+    console.log(`${process.env.NEXT_PUBLIC_API_URL}`);
     return pb;
 };
 
@@ -31,7 +32,7 @@ export async function getProjects() {
 export async function getResume() {
     const pb = await initPocketBase();
     try {
-        const record = await pb.collection('resume').getOne('c1dg6os5lto25hk');
+        const record = await pb.collection('resume').getOne('5bgqdcwzz8h2500');
         const resumeFilename = record.resume_file; // Assuming 'resume_file' is the field name
         // Generate the file URL without specifying a thumbnail size
         const url = pb.files.getUrl(record, resumeFilename);

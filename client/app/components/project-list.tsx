@@ -15,12 +15,12 @@ export default function ProjectList() {
     fetchProjects();
   }, []);
 
-  if (!projects) {
+  if (projects === null) {
     return <div>Loading...</div>
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-4 p-4">
       {projects.map(project => (
         <div key={project.id} className="flex flex-col bg-[#1a1a2e] p-4 rounded-lg shadow-lg shadow-[#1a1a2e]/50 h-full">
           <h3 className="text-[#00cc00] text-lg mb-2" style={{textShadow: '0 0 2px #00cc00, 0 0 5px #00cc00'}}>

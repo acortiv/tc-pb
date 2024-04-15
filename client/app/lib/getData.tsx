@@ -2,7 +2,6 @@ import PocketBase from 'pocketbase';
 
 async function initPocketBase() {
     const pb = new PocketBase(`${process.env.NEXT_PUBLIC_API_URL}`);
-    console.log(`${process.env.NEXT_PUBLIC_API_URL}`);
     return pb;
 };
 
@@ -20,10 +19,8 @@ export async function getProjects() {
             };
         }));
 
-        console.log('Result: ', projectsWithImages);
         return projectsWithImages;
     } catch (error) {
-        console.log("Error: ", error);
         return null;
     }
 }
@@ -38,7 +35,6 @@ export async function getResume() {
         const url = pb.files.getUrl(record, resumeFilename);
         return url;
     } catch (error) {
-        console.log("Error: ", error);
         return null;
     }
 };
